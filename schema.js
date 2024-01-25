@@ -12,6 +12,7 @@ type Review {
 type Query {
     games: [Game]
     reviews: [Review]
+    review(id: ID!) : Review
 }
 `
 

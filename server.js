@@ -10,7 +10,9 @@ const {typeDefs} = require('./schema')
 
 const resolvers = {
     Query : {
-        games: () => db.games
+        games: () => db.games,
+        reviews: () => db.reviews,
+        review: (_, args) => db.reviews.find(review => review.id === args.id)
     }
 }
 
